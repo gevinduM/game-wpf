@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ArrayOfStatement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Statement>
+    <Text>My Name is Gemindu?</Text>
+    <IsTrue>false</IsTrue>
+  </Statement>
+  <Statement>
+    <Text>Im 25 years old?</Text>
+    <IsTrue>false</IsTrue>
+  </Statement>
+  <Statement>
+    <Text>Im from Sri Lanka?</Text>
+    <IsTrue>true</IsTrue>
+  </Statement>
+</ArrayOfStatement>

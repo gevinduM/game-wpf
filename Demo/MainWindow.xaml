@@ -1,0 +1,46 @@
+﻿<Window x:Class="Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Demo" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        FontSize="14"
+        ResizeMode="NoResize"
+        Title="True or False" Height="450" Width="800">
+    <DockPanel>
+        <Menu Height="25"  FontSize="14" DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Click="NewDb_Click" x:Name="NewDb" Header="New"/>
+                <MenuItem Click="OpenDb_Click" x:Name="OpenDb" Header="Open"/>
+                <MenuItem Click="SaveDB_Click" x:Name="SaveDB" Header="Save"/>
+                <MenuItem Click="DaveAsDb_Click" x:Name="DaveAsDb" Header="SaveAS"/>
+                <MenuItem Click="SartGame_Click" x:Name="SartGame" Header="Start Game"/>
+                <Separator></Separator>
+                <MenuItem Click="Exit_Click" x:Name="Exit" Header="Exit"/>
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Click="Cut_Click" x:Name="Cut" Header="Cut"/>
+                <MenuItem Click="Copy_Click" x:Name="Copy" Header="Copy"/>
+                <MenuItem Click="Past_Click" x:Name="Past" Header="Past"/>
+            </MenuItem>
+        </Menu>
+        <Grid Margin="12" Height="45" DockPanel.Dock="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                <Button x:Name="AddStatement" Margin="3" Width="80" Content="Add" Click="AddStatement_Click"/>
+                <Button x:Name="SaveStatement" Margin="3" Width="80" Content="Save" Click="SaveStatement_Click"/>
+                <Button x:Name="RemoveStatement" Margin="3" Width="80" Content="Remove" Click="RemoveStatement_Click"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                <xctk:IntegerUpDown x:Name="StatementNumber" Minimum="1" DefaultValue="1" Text="1" Margin="3" Width="60" ValueChanged="StatementNumber_ValueChanged"/>
+                <CheckBox VerticalAlignment="Center" x:Name="TrueFalseMark" Click="TrueFalseMark_Click"/>
+            </StackPanel>
+        </Grid>
+        <TextBox  x:Name="StatementText" TextChanged="StatementText_TextChanged"/>
+
+    </DockPanel>
+</Window>
